@@ -36,6 +36,18 @@ KINTONE_APPID=${appId || ''}
   fs.writeFileSync(envPath, envContent)
 }
 
+const createGitignore = answer => {
+  const { projectName } = answer
+  const content = `node_modules
+.DS_Store
+.env
+`
+  const targetPath = path.join(currentPath, projectName)
+  const gitignorePath = path.join(targetPath, '/.gitignore')
+
+  fs.writeFileSync(gitignorePath, content)
+}
+
 const editJsonFile = data => {
   const { key, value, targetFilePath } = data
 
@@ -70,6 +82,7 @@ export const generateTemplate = async answer => {
     })
     
     createEnv(answer)
+    createGitignore(answer)
     
     if (!needInformation) return
     if (!appId) return
