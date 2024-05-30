@@ -1,6 +1,6 @@
 {
   "name": "create-kvite",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -15,7 +15,7 @@
   },
   "author": "kaya-chiu",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^5.3.0",
     "inquirer": "^9.2.22",
     "ncp": "^2.0.0"

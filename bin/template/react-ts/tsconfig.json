@@ -23,7 +23,7 @@
   "files": [
     "./node_modules/@kintone/dts-gen/kintone.d.ts",
     "./src/dts/fields.d.ts",
-    "./src/dts/kchelper.d.ts"
+    "./node_modules/kchelper/kchelper.d.ts"
   ],
   "include": ["src/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
