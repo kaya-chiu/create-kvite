@@ -1,0 +1,33 @@
+{
+  "name": "kvite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "source .env && kintone-customize-uploader --base-url $KINTONE_BASE_URL --username $KINTONE_USERNAME --password $KINTONE_PASSWORD ./mainfests/dev.json",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "watch:dev": "npm run dev && run-p watch preview",
+    "update": "npm run build && source .env && kintone-customize-uploader --base-url $KINTONE_BASE_URL --username $KINTONE_USERNAME --password $KINTONE_PASSWORD ./mainfests/prod.json",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@kintone/customize-uploader": "^8.0.11",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "kchelper": "^1.0.1",
+    "npm-run-all": "^4.1.5",
+    "vite": "^5.2.0",
+    "vite-plugin-mkcert": "^1.17.5"
+  }
+}
