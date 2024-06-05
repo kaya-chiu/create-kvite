@@ -15,7 +15,7 @@ ${chalk.green('- manifests/prod.json')}
 const ts = `
 To get Type definition of fields in your kintone APP,
 run the following command:
-${chalk.yellow('npm run dts-gen')}
+${chalk.yellow('npm run set-type')}
 `
 
 const main = `

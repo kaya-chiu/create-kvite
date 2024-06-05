@@ -22,7 +22,7 @@
   },
   "files": [
     "./node_modules/@kintone/dts-gen/kintone.d.ts",
-    "./src/dts/fields.d.ts",
+    "./src/dts/types.d.ts",
     "./node_modules/kchelper/kchelper.d.ts"
   ],
   "include": ["src/**/*"],
